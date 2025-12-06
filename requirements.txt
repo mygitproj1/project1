@@ -1,0 +1,11 @@
+pandas
+scikit-learn
+joblib
+mlflow
+prefect # Use prefect==2.x
+fastapi
+uvicorn
+pydantic
+evidently
+streamlit
+dvc
