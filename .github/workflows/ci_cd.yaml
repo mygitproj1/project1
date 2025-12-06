@@ -24,7 +24,7 @@ jobs:
 
     - name: Run DVC pull check (Simulated Data Availability)
       # Simulates ensuring that code can pull data artifacts
-      run: dvc pull --skip-cache data/processed
+      run: dvc pull data/processed
 
     - name: Run Unit Tests (Placeholder - Add actual tests in a /tests dir)
       run: echo "No unit tests found. Skipping. (Add 'python -m unittest discover tests' for real project)"
