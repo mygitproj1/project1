@@ -35,3 +35,14 @@ jobs:
 
     - name: Echo CD Instruction
       run: echo "CI successful. For true CD, a final step would push the image to DockerHub/ACR/GCR."
+
+    - name: Initialize DVC and pull metadata
+      run: |
+        # 1. Install DVC (since it's in requirements.txt, this might be redundant but is good practice)
+        # pip install dvc[all]
+        
+        # 2. Initialize DVC in the CI environment (this sets up local configuration)
+        dvc init --no-scm
+        
+        # 3. Pull the metadata pointer files (which are small and tracked by Git)
+        dvc pull data/processed
